@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen gap-[8px] bg-[url(img/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg)] bg-cover bg-center">
+    <main class="flex flex-col gap-[8px] p-[12px] rounded-[8px] bg-black/40">
+        <header class="text-[25px] text-center text-white font-bold">
+            TODO LIST
+        </header>
+        <form class="flex gap-[8px]">
+            <input type="text" id="todo-name" class="grow rounded-[4px] px-2 text-white bg-[#0F172A]/50" placeholder="Add a todo..">
+            <input type="date" id="todo-date" class="grow rounded-[4px] px-2 text-white bg-[#0F172A]/50">
+            <button type="submit" class="bg-blue-500 rounded-[4px] p-[2px] w-[35px] text-white text-[20px]">+</button>
+        </form>
+        <section class="flex justify-between py-1">
+            <section id="filter-section" class="flex gap-[8px]">
+                <button id="filter" type="button" class="bg-white rounded-[4px] p-2 font-bold text-[12px]">FILTER</button>
+            </section>
+            <button id="deleteAll" type="button" class="bg-red-500 rounded-[4px] p-2 text-white font-bold text-[12px]">DELETE ALL</button>
+        </section>
+        <div class="overflow-hidden rounded-[4px] shadow-lg">
+            <table class="text-[12px] text-white border-collapse table-fixed">
+                <thead class="bg-[#1E293B]/75">
+                    <tr>
+                        <th class="p-1 px-2 w-[200px] text-left">TASK</th>
+                        <th class="p-1 px-2 w-[150px] text-left">DUE DATE</th>
+                        <th class="p-1 px-2 w-[150px] text-left">STATUS</th>
+                        <th class="p-1 px-2 w-[150px]">ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody id="todo-list" class="bg-[#0F172A]/80">
+                    <td class="p-2 text-center text-slate-300" colspan="4">No task found</td>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <span class="font-bold text-white text-shadow-md/75">Created by Hanif Syauqi. Copyright 2025</span>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
